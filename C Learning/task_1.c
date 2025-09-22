@@ -1,12 +1,11 @@
 //
-//  main.c
+//  task_1.c
 //  C Learning
 //
 //  Created by apple on 22/09/25.
 //
 
 #include <stdio.h>
-
 int main() {
     int number;
     
@@ -29,4 +28,3 @@ int main() {
     }
     return 0;
 }
-
