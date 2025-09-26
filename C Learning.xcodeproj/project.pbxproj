@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18296F7D2E840201000719D9 /* new.c in Sources */ = {isa = PBXBuildFile; fileRef = 18296F7C2E840201000719D9 /* new.c */; };
+		18B1403B2E828A4E00280E16 /* practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 18B1403A2E828A4E00280E16 /* practice.c */; };
 		18E48E142E8187B000EA244F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E132E8187B000EA244F /* main.c */; };
 		18E48E1B2E8188AD00EA244F /* task_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E1A2E8188AD00EA244F /* task_1.c */; };
+		18E48E1D2E818ABF00EA244F /* task_2.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E1C2E818ABF00EA244F /* task_2.c */; };
+		18E48E1F2E818E1400EA244F /* task_3.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E1E2E818E1400EA244F /* task_3.c */; };
+		18E48E212E81921800EA244F /* task_4.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E202E81921800EA244F /* task_4.c */; };
+		18E48E232E819E1300EA244F /* task_5.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E222E819E1300EA244F /* task_5.c */; };
+		18E76C672E86AA8200FBCFEE /* practice2.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E76C662E86AA8200FBCFEE /* practice2.c */; };
+		18E76C692E86ABC400FBCFEE /* practice3.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E76C682E86ABC400FBCFEE /* practice3.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,9 +32,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18296F7C2E840201000719D9 /* new.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = new.c; sourceTree = "<group>"; };
+		18B1403A2E828A4E00280E16 /* practice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = practice.c; sourceTree = "<group>"; };
 		18E48E102E8187B000EA244F /* C Learning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C Learning"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E48E132E8187B000EA244F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		18E48E1A2E8188AD00EA244F /* task_1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = task_1.c; sourceTree = "<group>"; };
+		18E48E1C2E818ABF00EA244F /* task_2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = task_2.c; sourceTree = "<group>"; };
+		18E48E1E2E818E1400EA244F /* task_3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = task_3.c; sourceTree = "<group>"; };
+		18E48E202E81921800EA244F /* task_4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = task_4.c; sourceTree = "<group>"; };
+		18E48E222E819E1300EA244F /* task_5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = task_5.c; sourceTree = "<group>"; };
+		18E76C652E86AA8200FBCFEE /* practice2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = practice2.h; sourceTree = "<group>"; };
+		18E76C662E86AA8200FBCFEE /* practice2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = practice2.c; sourceTree = "<group>"; };
+		18E76C682E86ABC400FBCFEE /* practice3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = practice3.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +78,15 @@
 			children = (
 				18E48E132E8187B000EA244F /* main.c */,
 				18E48E1A2E8188AD00EA244F /* task_1.c */,
+				18E48E1E2E818E1400EA244F /* task_3.c */,
+				18E48E202E81921800EA244F /* task_4.c */,
+				18E48E222E819E1300EA244F /* task_5.c */,
+				18B1403A2E828A4E00280E16 /* practice.c */,
+				18E48E1C2E818ABF00EA244F /* task_2.c */,
+				18296F7C2E840201000719D9 /* new.c */,
+				18E76C662E86AA8200FBCFEE /* practice2.c */,
+				18E76C652E86AA8200FBCFEE /* practice2.h */,
+				18E76C682E86ABC400FBCFEE /* practice3.c */,
 			);
 			path = "C Learning";
 			sourceTree = "<group>";
@@ -122,8 +148,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18296F7D2E840201000719D9 /* new.c in Sources */,
 				18E48E1B2E8188AD00EA244F /* task_1.c in Sources */,
+				18E48E212E81921800EA244F /* task_4.c in Sources */,
+				18B1403B2E828A4E00280E16 /* practice.c in Sources */,
+				18E48E232E819E1300EA244F /* task_5.c in Sources */,
 				18E48E142E8187B000EA244F /* main.c in Sources */,
+				18E76C692E86ABC400FBCFEE /* practice3.c in Sources */,
+				18E76C672E86AA8200FBCFEE /* practice2.c in Sources */,
+				18E48E1F2E818E1400EA244F /* task_3.c in Sources */,
+				18E48E1D2E818ABF00EA244F /* task_2.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
