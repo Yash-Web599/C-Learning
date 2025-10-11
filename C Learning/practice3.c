@@ -1,8 +1,8 @@
-
-  practice3.c
-  C Learning
-
-  Created by apple on 26/09/25.
+//
+//  practice3.c
+//  C Learning
+//
+//  Created by apple on 26/09/25.
 
 
 #include <stdio.h>
