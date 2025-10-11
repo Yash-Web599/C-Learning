@@ -11,10 +11,13 @@ int main() {
     }
     else if (number % 2 == 0){
         printf("Even Number !!! \n");
+        printf("Commit");
     }
     else {
         printf("Odd number !!!\n");
     }
+    
+    printf("HEllo");
 
     return 0;
 }
