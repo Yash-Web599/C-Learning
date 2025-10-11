@@ -16,9 +16,9 @@ int main() {
     else {
         printf("Odd number !!!\n");
     }
+     
     
-    
-    printf("HEllo World");
+    printf("HEllo");
 
     return 0;
 }
