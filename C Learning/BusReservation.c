@@ -1,13 +1,15 @@
 //
-//  BusRegistration.c
+//  BusReservation.c
 //  C Learning
 //
-//  Created by apple on 24/10/25.
+//  Created by apple on 25/10/25.
 //
 
 #include <stdio.h>
 
-#define Max_User 2
+#define Max_User 3
+#define Max_Buses 3
+#define Max_Seat 50
 
 struct User{
     
@@ -15,13 +17,27 @@ struct User{
     char userpass[30];
 };
 
+struct Bus {
+    int busNo;
+    int seats[Max_Seat];
+    float fare;
+    char from[30];
+    char to[30];
+};
+
 struct User users[Max_User];
+struct Bus buses[Max_Buses];
 int countUser = 0;
 
 
 void signUp();
 int signIn();
 int compareText(char str1[], char str2[]);
+void dashboard(int userIndex);
+void viewBuses();
+//void bookSeat();
+//void deleteSeat();
+void busDetails();
 
 int compareText(char str1[], char str2[]) {
     
@@ -72,21 +88,112 @@ int signIn() {
     
     for (i = 0; i < countUser; i++) {
         if (compareText(name, users[i].username) == 0 && compareText(pass, users[i].userpass) == 0) {
+            printf("Login successful. Welcome, %s\n", users[i].username);
+            return i;
+        }
+    }
+    
+    printf("Wrong username or password!\n");
+    return -1;
+}
+
+void dashboard() {
+    int choice;
+    
+    do {
+        
+        printf("\n=== User Menu ===\n");
+        printf("1. Reserve Seat\n");
+        printf("2. Cancel Seat\n");
+        printf("3. View Buses\n");
+        printf("4. Logout\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        
+        switch (choice) {
+            case 1:
+//                bookSeat();
+                break;
+                
+            case 2:
+//                deleteSeat();
+                break;
+                
+            case 3:
+                viewBuses();
+                break;
+                
+            case 4:
+                printf("Logging out....\n");
+                break;
+                
+            default:
+                printf("Invalid choice, try again.\n");
+                break;
+        }
+
+    } while(choice != 4);
+}
+
+void busDetails() {
+    
+    sprintf(buses[0].from, "Delhi");
+    sprintf(buses[0].to, "Bhopal");
+    
+    sprintf(buses[1].from, "Jodhpur");
+    sprintf(buses[1].to, "Vrindavan");
+    
+    sprintf(buses[2].from, "Gujrat");
+    sprintf(buses[2].to, "Jaipur");
+    
+    for (int i = 0; i< Max_Buses; i++) {
+        buses[i].busNo = 100 + i;
+        buses[i].fare = 500 + (i *100);
+        
+        for (int j = 0; j < Max_Seat; j++) {
+            buses[i].seats[j] = 0;
+        }
+    }
+}
+
+
+
+void viewBuses() {
+    int i, j, available, busNum, found = 0;
+    
+    printf("Enter Bus Number: ");
+    scanf("%d", &busNum);
+    printf("\n");
+    
+    for (i = 0; i < Max_Buses; i++) {
+        if(buses[i].busNo == busNum){
             found = 1;
+            available = 0;
+            
+            for (j = 0; j < Max_Seat; j++) {
+                if (buses[i].seats[j] == 0) {
+                    available++;
+                }
+            }
+            
+            printf("Bus Number       : %d\n", buses[i].busNo);
+            printf("From             : %s\n", buses[i].from);
+            printf("To               : %s\n", buses[i].to);
+            printf("Total Seats      : %d\n", Max_Seat);
+            printf("Available Seats  : %d\n", available);
+            printf("Fare             : ₹%.2f\n", buses[i].fare);
             break;
         }
     }
     
-    if (found == 1) {
-        return 1;
-    } else {
-        return 0;
-    }
+    if (!found)
+        printf("Invalid Bus Number!\n");
 }
 
 int main() {
     
-    int choice, loggedIn = 0;
+    int choice, loggedIn;
+    busDetails();
     
     do {
         printf("                *************BUS  RESERVATION SYSTEM************\n");
@@ -105,11 +212,8 @@ int main() {
             case 2:
                 loggedIn = signIn();
                 
-                if (loggedIn == 1) {
-                    printf("Login successful. Welcome, %s\n", users[countUser-1].username);
-                } else {
-                    printf("Wrong username or password!\n");
-                }
+                if (loggedIn != -1)
+                dashboard(loggedIn);
                 break;
                 
             case 3:
