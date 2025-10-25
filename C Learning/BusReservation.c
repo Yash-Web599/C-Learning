@@ -35,7 +35,7 @@ int signIn();
 int compareText(char str1[], char str2[]);
 void dashboard(int userIndex);
 void viewBuses();
-//void bookSeat();
+void bookSeat();
 //void deleteSeat();
 void busDetails();
 
@@ -112,7 +112,7 @@ void dashboard() {
         
         switch (choice) {
             case 1:
-//                bookSeat();
+                bookSeat();
                 break;
                 
             case 2:
@@ -188,6 +188,33 @@ void viewBuses() {
     
     if (!found)
         printf("Invalid Bus Number!\n");
+}
+
+
+void bookSeat() {
+    int busNo,seatNo, booked = 0;
+    
+    printf("Enter Bus Number: ");
+    scanf("%d", &busNo);
+    printf("Enter Number of Seats: ");
+    scanf("%d", &seatNo);
+    
+    for (int i = 0; i < Max_Buses; i++) {
+        if (buses[i].busNo == busNo) {
+            for (int j = 0; j < Max_Seat && booked < seatNo; j++) {
+                if(buses[i].seats[j] == 0) {
+                    buses[i].seats[j] = 1;
+                    booked++;
+                }
+            }
+            
+            if (booked == seatNo){
+                printf("\nBooking Successful! %d seats booked on Bus Number %d\n", seatNo, busNo);
+            }
+        }
+    }
+    
+    printf("\nInvalid Bus Number!\n");
 }
 
 int main() {
