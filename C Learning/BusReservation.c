@@ -36,7 +36,7 @@ int compareText(char str1[], char str2[]);
 void dashboard(int userIndex);
 void viewBuses();
 void bookSeat();
-//void deleteSeat();
+void deleteSeat();
 void busDetails();
 
 int compareText(char str1[], char str2[]) {
@@ -116,7 +116,7 @@ void dashboard() {
                 break;
                 
             case 2:
-//                deleteSeat();
+                deleteSeat();
                 break;
                 
             case 3:
@@ -210,7 +210,42 @@ void bookSeat() {
             
             if (booked == seatNo){
                 printf("\nBooking Successful! %d seats booked on Bus Number %d\n", seatNo, busNo);
+                return;
             }
+        }
+    }
+    
+    printf("\nInvalid Bus Number!\n");
+}
+
+void deleteSeat() {
+    
+    int busNo,seatNo, cancelled = 0;
+    
+    printf("Enter Bus Number: ");
+    scanf("%d", &busNo);
+    printf("Enter Number of Seats: ");
+    scanf("%d", &seatNo);
+    
+    for (int i = 0; i < Max_Buses; i++) {
+        if (buses[i].busNo == busNo) {
+            for (int j = 0; j < Max_Seat && cancelled < seatNo; j++) {
+                if(buses[i].seats[j] == 1) {
+                    buses[i].seats[j] = 0;
+                    cancelled++;
+                }
+            }
+            
+            if (cancelled == seatNo){
+                printf("\nCancellation Successful! %d seats cancelled on Bus Number %d\n", seatNo, busNo);
+            }
+            else if (cancelled > 0){
+                printf("\nOnly %d seats were cancelled \n", cancelled);
+            }
+            else{
+                printf("\nNo seats were booked to cancel!\n");
+            }
+            return;
         }
     }
     
