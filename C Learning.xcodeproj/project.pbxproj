@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18296F7D2E840201000719D9 /* new.c in Sources */ = {isa = PBXBuildFile; fileRef = 18296F7C2E840201000719D9 /* new.c */; };
+		186192772EAC0C4C00969628 /* BusReservation.c in Sources */ = {isa = PBXBuildFile; fileRef = 186192762EAC0C4C00969628 /* BusReservation.c */; };
 		18B1403B2E828A4E00280E16 /* practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 18B1403A2E828A4E00280E16 /* practice.c */; };
-		18E48E142E8187B000EA244F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E132E8187B000EA244F /* main.c */; };
 		18E48E1B2E8188AD00EA244F /* task_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E1A2E8188AD00EA244F /* task_1.c */; };
 		18E48E1D2E818ABF00EA244F /* task_2.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E1C2E818ABF00EA244F /* task_2.c */; };
 		18E48E1F2E818E1400EA244F /* task_3.c in Sources */ = {isa = PBXBuildFile; fileRef = 18E48E1E2E818E1400EA244F /* task_3.c */; };
@@ -33,9 +33,10 @@
 
 /* Begin PBXFileReference section */
 		18296F7C2E840201000719D9 /* new.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = new.c; sourceTree = "<group>"; };
+		186192762EAC0C4C00969628 /* BusReservation.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BusReservation.c; sourceTree = "<group>"; };
+		186192782EAC0C9200969628 /* C Learning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "C Learning.entitlements"; sourceTree = "<group>"; };
 		18B1403A2E828A4E00280E16 /* practice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = practice.c; sourceTree = "<group>"; };
 		18E48E102E8187B000EA244F /* C Learning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C Learning"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18E48E132E8187B000EA244F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		18E48E1A2E8188AD00EA244F /* task_1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = task_1.c; sourceTree = "<group>"; };
 		18E48E1C2E818ABF00EA244F /* task_2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = task_2.c; sourceTree = "<group>"; };
 		18E48E1E2E818E1400EA244F /* task_3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = task_3.c; sourceTree = "<group>"; };
@@ -76,8 +77,9 @@
 		18E48E122E8187B000EA244F /* C Learning */ = {
 			isa = PBXGroup;
 			children = (
-				18E48E132E8187B000EA244F /* main.c */,
+				186192782EAC0C9200969628 /* C Learning.entitlements */,
 				18E48E1A2E8188AD00EA244F /* task_1.c */,
+				186192762EAC0C4C00969628 /* BusReservation.c */,
 				18E48E1E2E818E1400EA244F /* task_3.c */,
 				18E48E202E81921800EA244F /* task_4.c */,
 				18E48E222E819E1300EA244F /* task_5.c */,
@@ -150,10 +152,10 @@
 			files = (
 				18296F7D2E840201000719D9 /* new.c in Sources */,
 				18E48E1B2E8188AD00EA244F /* task_1.c in Sources */,
+				186192772EAC0C4C00969628 /* BusReservation.c in Sources */,
 				18E48E212E81921800EA244F /* task_4.c in Sources */,
 				18B1403B2E828A4E00280E16 /* practice.c in Sources */,
 				18E48E232E819E1300EA244F /* task_5.c in Sources */,
-				18E48E142E8187B000EA244F /* main.c in Sources */,
 				18E76C692E86ABC400FBCFEE /* practice3.c in Sources */,
 				18E76C672E86AA8200FBCFEE /* practice2.c in Sources */,
 				18E48E1F2E818E1400EA244F /* task_3.c in Sources */,
@@ -276,6 +278,7 @@
 		18E48E182E8187B000EA244F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "C Learning/C Learning.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H3GBH6W27S;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -286,6 +289,7 @@
 		18E48E192E8187B000EA244F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "C Learning/C Learning.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H3GBH6W27S;
 				ENABLE_HARDENED_RUNTIME = YES;
